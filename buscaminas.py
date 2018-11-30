@@ -21,7 +21,7 @@ class Ventana(QtWidgets.QDialog):
         self.Destapar.clicked.connect(self.destapar)
         self.Marcar.clicked.connect(self.marcar)
         self.show()
-
+    # iniciar buscaminas
     def iniciar(self):
         self.dificultadSeleccionada = self.Dificultad.currentText()
         self.nivelDificultad.setDificultad(self.dificultadSeleccionada)
@@ -37,7 +37,7 @@ class Ventana(QtWidgets.QDialog):
         # while True:
         #     for s in range(0,60):
         #         self.
-
+    # reinicio juego 
     def reinicio(self):
         self.dificultadSeleccionada = self.Dificultad.currentText()
         self.nivelDificultad.setDificultad(self.dificultadSeleccionada)
@@ -50,7 +50,7 @@ class Ventana(QtWidgets.QDialog):
         nuevoTexto = self.tablero.generar_tablero()
         self.tabla.setText('')
         self.tabla.setText(str(nuevoTexto))
-
+    # funcion para destapar la celda
     def destapar(self):
         coordX = int(self.coorX.text())
         coordY = int(self.coorY.text())
@@ -63,7 +63,7 @@ class Ventana(QtWidgets.QDialog):
             nuevoTexto = self.tablero.generar_tablero()
             self.tabla.setText('')
             self.tabla.setText(str(nuevoTexto))
-
+    # funcion para marcar bandera a la celda 
     def marcar(self):
         coordX = int(self.coorX.text())
         coordY = int(self.coorY.text())
